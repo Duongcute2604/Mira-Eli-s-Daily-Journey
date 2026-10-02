@@ -73,7 +73,7 @@ Bản gốc dùng M04 (Café) và M08 (Transit) làm **nơi hai người gặp n
 
 ### 03.00.2 — Bổ sung do Q1: M05 là viện dưỡng lão, không phải văn phòng
 
-Bản gốc gọi M05 là "Workplace" chung chung và dùng asset `office 1–5` (văn phòng).
+Bản gốc gọi M05 là "Workplace" chung chung và dùng asset `bg_office_01`–`05` (văn phòng).
 Với setting đã chốt, M05 phải là **viện dưỡng lão**: sảnh chính, hành lang, kho thuốc, bếp, phòng bệnh nhân, phòng sếp.
 → Xem danh sách asset cần bổ sung tại `08_ASSET_MANIFEST.md`.
 

@@ -20,7 +20,7 @@
 | **Bảng tổng hợp** | `Pack Tổng/` | 28 | ❌ **Không** — đây là bảng tham khảo, không phải asset game |
 | | **TỔNG** | **149** | **105 dùng được + 44 tham khảo** |
 
-**Ngoài ra:** `tệp ảnh background/__MACOSX/` chứa **15 file rác** (AppleDouble) — không phải 14 như ghi trong tài liệu gốc.
+**Ngoài ra:** `tệp ảnh background/__MACOSX/` chứa **15 file rác** (AppleDouble) + 1 file `.DS_Store` — **đã xoá ngày 02/10/2026**. (Tài liệu gốc ghi 14, thực tế là 15.)
 
 > 🚨 **Kết luận quan trọng:** kho có **105 ảnh dùng được** nhưng thiếu hẳn **một số map cốt lõi**. Chi tiết 08.04.
 
@@ -30,34 +30,37 @@
 
 ### 08.01.1 — `tệp ảnh background/` — 43 ảnh
 
-| Phân loại | Số | Tên file |
+| Phân loại | Số | Tên file (sau khi chuẩn hoá) |
 |-----------|----|---------|
-| Phòng ngủ | 7 | `bedroom 1` … `bedroom 7` |
-| Bếp | 5 | `Kitchen 1`, `kitchen 2` … `kitchen 4` |
-| Văn phòng | 5 | `office 1` … `office 5` |
-| Đường phố | 4 | `street 1` … `street 4` |
-| Tàu hỏa | 4 | `train 1` … `train 3`, `inside train 1` |
-| Cửa hàng / quán | 3 | `clothing shop 1`, `restaurant 1`, `mall 1`–`2` |
-| Đường hoa anh đào | 2 | `cherry street 1`, `cherry street blur 1` |
-| Vườn | 2 | `garden blur 1`, `garden blur 2` |
-| Bãi biển | 1 | `dawn beach 1` |
-| Onsen | 3 | `onsen 1`, `onsen 3`, `onsen blur 1` |
-| Sân ga | 1 | `train station 1` |
-| PNG miễn phí | 5 | `FREE_BG_1`, `FREE_BG_2`, `FREE_BG_2_night`, `FREE_BG_2_sunset`, `FREE_BG_3` |
+| Phòng ngủ | 7 | `bg_bedroom_01` … `bg_bedroom_07` |
+| Bếp | 4 | `bg_kitchen_01` … `bg_kitchen_04` |
+| Văn phòng | 5 | `bg_office_01` … `bg_office_05` |
+| Đường phố | 4 | `bg_street_01` … `bg_street_04` |
+| Tàu hỏa | 4 | `bg_train_01`–`03`, `bg_train_interior_01` |
+| Cửa hàng / quán | 3 | `bg_clothing_shop_01`, `bg_restaurant_01`, `bg_mall_01`–`02` |
+| Đường hoa anh đào | 2 | `bg_cherry_street_01`, `bg_cherry_street_blur_01` |
+| Vườn | 2 | `bg_garden_blur_01`, `bg_garden_blur_02` |
+| Bãi biển | 1 | `bg_dawn_beach_01` |
+| Onsen | 3 | `bg_onsen_01`, `bg_onsen_03`, `bg_onsen_blur_01` |
+| Cửa hàng biến blur | 1 | `bg_clothing_shop_blur_01` |
+| Sân ga | 1 | `bg_train_station_01` |
+| PNG "miễn phí" | 5 | `bg_free_01`, `bg_free_02`, `bg_free_02_night`, `bg_free_02_sunset`, `bg_free_03` |
+
+> Tổng: 7 + 4 + 5 + 4 + 4 + 3 + 2 + 2 + 1 + 3 + 1 + 1 + 5 = **43** ✅
 
 **Kích thước thật:**
 
 | Kích thước | Số | Đánh giá |
 |-----------|----|---------|
 | **1920×1080** | 41 | ✅ Đúng 16:9, dùng được ngay |
-| **1619×1080** | 2 | ⚠️ `bedroom 1.jpg`, `bedroom 2.jpg` — tỉ lệ 1.5, **sẽ méo** trên canvas 16:9 |
+| **1619×1080** | 2 | ⚠️ `bg_bedroom_01.jpg`, `bg_bedroom_02.jpg` — tỉ lệ 1.5, **sẽ méo** trên canvas 16:9 |
 
-> ⚠️ **Xử lý `bedroom 1` / `bedroom 2`:** canvas game là 1920×1080. Đặt 1619×1080 lên sẽ bị kéo ngang. Phải chọn một trong hai:
+> ⚠️ **Xử lý `bg_bedroom_01` / `bg_bedroom_02`:** canvas game là 1920×1080. Đặt 1619×1080 lên sẽ bị kéo ngang. Phải chọn một trong hai:
 > (a) crop cắt ngang về 1920 — mất 301px ở cạnh, chấp nhận được vì nội dung phòng ngủ thường ở giữa;
 > (b) thêm viền/padding bằng nền trung tính.
 > **Không được** để nguyên rồi ép tỉ lệ — sẽ làm méo đồ vật trong phòng.
 
-> 💡 **Điểm tốt:** nhóm `FREE_BG_2` đã có sẵn **3 biến thể** (ngày / hoàng hôn / đêm). Đây là nguồn tài nguyên có sẵn cho hệ thống `TIME_BLOCK` — nên dùng cho M01.
+> 💡 **Điểm tốt:** nhóm `bg_free_02*` đã có sẵn **3 biến thể** (ngày / hoàng hôn / đêm). Đây là nguồn tài nguyên có sẵn cho hệ thống `TIME_BLOCK` — nên dùng cho M01.
 
 ### 08.01.2 — `tệp ảnh background/City/` — 28 ảnh
 
@@ -65,61 +68,61 @@
 
 Tất cả 28 ảnh đều **1920×1080** — đúng chuẩn, không cần xử lý.
 
-| Địa điểm | Day | Afternoon | Night Light | Thiếu |
-|-----------|-----|-----------|-------------|-------|
-| Downtown 1 | ✅ | ✅ | ✅ | — |
-| Downtown 2 | ✅ | ✅ | ✅ | — |
-| Downtown 3 | ✅ | ✅ | ✅ | — |
-| Neighborhood 1 | ✅ | ❌ | ❌ | **thiếu 2** |
-| Neighborhood 2 | ✅ | ❌ | ✅ | **thiếu 1** |
-| Neighborhood 3 | ✅ | ✅ | ✅ | — |
-| Park 1 | ✅ | ✅ | ✅ | — |
-| Park 2 | ❌ | ❌ | ✅ | **thiếu 2** |
-| Park 3 | ✅ | ✅ | ✅ | — |
-| Playground 3 | ✅ | ❌ | ❌ | **thiếu 2** |
-| Sky | ✅ | ✅ | ✅ | — |
+| Địa điểm | File ngày | File chiều | File đêm | Thiếu |
+|-----------|-----------|------------|----------|-------|
+| Downtown 1 | `_01_day` ✅ | `_01_afternoon` ✅ | `_01_night` ✅ | — |
+| Downtown 2 | `_02_day` ✅ | `_02_afternoon` ✅ | `_02_night` ✅ | — |
+| Downtown 3 | `_03_day` ✅ | `_03_afternoon` ✅ | `_03_night` ✅ | — |
+| Neighborhood 1 | `_01_day` ✅ | ❌ | ❌ | **thiếu 2** |
+| Neighborhood 2 | `_02_day` ✅ | ❌ | `_02_night` ✅ | **thiếu 1** |
+| Neighborhood 3 | `_03_day` ✅ | `_03_afternoon` ✅ | `_03_night` ✅ | — |
+| Park 1 | `_01_day` ✅ | `_01_afternoon` ✅ | `_01_night` ✅ | — |
+| Park 2 | ❌ | ❌ | `_02_night` ✅ | **thiếu 2** |
+| Park 3 | `_03_day` ✅ | `_03_afternoon` ✅ | `_03_night` ✅ | — |
+| Playground 3 | `_03_day` ✅ | ❌ | ❌ | **thiếu 2** |
+| Sky | `bg_city_sky_day.png` ✅ | `bg_city_sky_afternoon.png` ✅ | `bg_city_sky_night.png` ✅ | — |
 
-**Đọc được từ cấu trúc tên file:** `Downtown 1 Night Light.png` = cùng một góc phố, khung NIGHT.
+**Đọc được từ cấu trúc tên file:** `bg_city_downtown_01_night.png` = cùng một góc phố với `bg_city_downtown_01_day.png`, chỉ khác khung NIGHT.
 
 > 🎯 **Cơ hội thiết kế:** `02_GAMEPLAY_SYSTEM.md` 02.07 định nghĩa 4 khung giờ. `City/` cho ta map ngoài trời **miễn phí** 3/4 biến thể. Đừng vẽ thêm background thành phố — hãy dùng bộ này và chỉ bổ sung 7 ảnh còn thiếu.
 
 **Bổ sung cần thiết (7 ảnh):**
 
-| Thiếu | Tại sao quan trọng |
+| File cần bổ sung | Tại sao quan trọng |
 |-------|-------------------|
-| Neighborhood 1 Afternoon | Arc 1 hay dùng Neighborhood 1 |
-| Neighborhood 1 Night Light | Arc 2 (phần lớn ban đêm) |
-| Neighborhood 2 Afternoon | chuyển khung giờ |
-| Park 2 Day + Afternoon | Park 2 giờ chỉ có Night → không dùng được giữa ngày |
-| Playground 3 Afternoon + Night | tương tự |
+| `bg_city_neighborhood_01_afternoon.png` | Arc 1 hay dùng Neighborhood 1 |
+| `bg_city_neighborhood_01_night.png` | Arc 2 (phần lớn ban đêm) |
+| `bg_city_neighborhood_02_afternoon.png` | chuyển khung giờ |
+| `bg_city_park_02_day.png` + `_afternoon` | Park 2 chỉ có Night → không dùng được giữa ngày |
+| `bg_city_playground_03_afternoon.png` + `_night` | tương tự |
 
 ### 08.01.3 — `Spiral Atlas VN House Backgrounds/` — 11 ảnh
 
-Tất cả **1920×1080**. Nội dung:
+Tất cả **1920×1080**. Toàn bộ được đổi tên có tiền tố **`bg_sa_`** — `sa` = Spiral Atlas, nhắc bắt buộc phải ghi credit. Xem 08.05.1.
 
-| File | Nội dung |
+| File mới | Nội dung |
 |------|----------|
-| `entrance.jpg` | cửa ra vào |
-| `hallway.jpg` | hành lang |
-| `dining.jpg` | phòng ăn |
-| `dining_kitchen.jpg` | phòng ăn liền bếp |
-| `kitchen.jpg` | bếp |
-| `lounge.jpg` | phòng khách |
-| `bathroom.jpg` | phòng tắm |
-| `master bedroom.jpg` | phòng ngủ chính |
-| `single bedroom.jpg` | phòng ngủ đơn |
-| `outside1.jpg` | ngoài nhà biến 1 |
-| `outside2.jpg` | ngoài nhà biến 2 |
+| `bg_sa_entrance.jpg` | cửa ra vào |
+| `bg_sa_hallway.jpg` | hành lang |
+| `bg_sa_dining.jpg` | phòng ăn |
+| `bg_sa_dining_kitchen.jpg` | phòng ăn liền bếp |
+| `bg_sa_kitchen.jpg` | bếp |
+| `bg_sa_lounge.jpg` | phòng khách |
+| `bg_sa_bathroom.jpg` | phòng tắm |
+| `bg_sa_master_bedroom.jpg` | phòng ngủ chính |
+| `bg_sa_single_bedroom.jpg` | phòng ngủ đơn |
+| `bg_sa_outside_01.jpg` | ngoài nhà biến 1 |
+| `bg_sa_outside_02.jpg` | ngoài nhà biến 2 |
 
-Kèm 2 file văn bản: `license.txt`, `Credits and Information.txt` — **giữ nguyên, không xoá**.
+Kèm 2 file văn bản: `license.txt`, `Credits and Information.txt` — **giữ nguyên, không xoá, không đổi tên** (chúng là chứng cứ license).
 
 > ⚠️ **Vấn đề phong cách — nghiêm trọng hơn vấn đề license.**
 > Nhóm này vẽ kiểu **toon-shaded / cel-shaded**. Nhóm `tệp ảnh background/` (43 ảnh) vẽ kiểu **semi-realistic mềm**. Trộn hai kiểu trong cùng một map nhà sẽ nhìn ra ngay.
 >
-> **Khuyến nghị:** dùng `Spiral Atlas` cho **M02 (hành lang)** và phần `outside` — là nơi chuyển cảnh, người chơi không soi kỹ. **Không** dùng cho phòng ngủ hoặc bếp nơi người chơi ở lâu, vì sẽ đụng hàng với `bedroom 1–7` và `kitchen 1–4`.
+> **Khuyến nghị:** dùng `bg_sa_*` cho **M02 (hành lang)** và phần `outside` — là nơi chuyển cảnh, người chơi không soi kỹ. **Không** dùng cho phòng ngủ hoặc bếp nơi người chơi ở lâu, vì sẽ đụng hàng với `bg_bedroom_*` và `bg_kitchen_*`.
 
 > ⚠️ **Vấn đề chất lượng (ghi trong file gốc của tác giả):**
-> `Credits and Information.txt` nói rõ: *"Note: Outside1 and Outside2 do not currently have lines."* — 2 ảnh ngoài nhà **chưa có đường nét**. Về mặt pháp lý OK, về mặt thẩm mỹ thì dễ bị phê phán. Cân nhắc dùng `outside1` thôi, hoặc dùng làm base để vẽ lại.
+> `Credits and Information.txt` nói rõ: *"Note: Outside1 and Outside2 do not currently have lines."* — `bg_sa_outside_01.jpg` và `bg_sa_outside_02.jpg` **chưa có đường nét**. Về mặt pháp lý OK, về mặt thẩm mỹ thì dễ bị phê phán. Cân nhắc chỉ dùng `_01`, hoặc dùng làm base để vẽ lại.
 
 ### 08.01.4 — Bảng ánh xạ Background → Map
 
@@ -127,24 +130,24 @@ Dựa trên `03_MAP_EVENT_FLOW.md`.
 
 | Map | Tên | Ảnh được chỉ định | Tình trạng |
 |-----|-----|------------------|-----------|
-| **M01** | Nhà Dương — phòng ngủ | `bedroom 3`–`bedroom 7` | ✅ có |
-| **M01** | Nhà Dương — bếp | `kitchen 2`–`kitchen 4` | ✅ có |
-| **M01** | Nhà Dương — phòng khách | `lounge.jpg` (Spiral) | ⚠️ lệch phong cách |
-| **M01** | Nhà Dương — **biến thể ban đêm** | `FREE_BG_2_night.png` | ❌ **thiếu bản riêng cho từng phòng** |
-| **M02** | Hành lang | `hallway.jpg` (Spiral) | ✅ có |
-| **M02** | Cửa ra vào | `entrance.jpg` (Spiral) | ✅ có |
-| **M03** | Đường / khu phố | `street 1`–`4`, `cherry street 1` | ✅ có |
-| **M03** | Khu phố (biến giờ) | `City/Neighborhood *` | ✅ có, thiếu 2 ảnh |
-| **M04** | **Điểm kết nối** (quán) | `restaurant 1.jpg` | ⚠️ **đang dùng nhầm tạm** |
-| **M05** | **Viện dưỡng lão** | `office 1`–`office 5` | ⚠️ **văn phòng ≠ viện dưỡng** |
-| **M06** | Phòng họp / phòng sếp | `office 5` | ⚠️ dùng chung với M05 |
+| **M01** | Nhà Dương — phòng ngủ | `bg_bedroom_03`–`07` | ✅ có |
+| **M01** | Nhà Dương — bếp | `bg_kitchen_02`–`04` | ✅ có |
+| **M01** | Nhà Dương — phòng khách | `bg_sa_lounge.jpg` | ⚠️ lệch phong cách |
+| **M01** | Nhà Dương — **biến thể ban đêm** | `bg_free_02_night.png` | ❌ **thiếu bản riêng cho từng phòng** |
+| **M02** | Hành lang | `bg_sa_hallway.jpg` | ✅ có |
+| **M02** | Cửa ra vào | `bg_sa_entrance.jpg` | ✅ có |
+| **M03** | Đường / khu phố | `bg_street_01`–`04`, `bg_cherry_street_01` | ✅ có |
+| **M03** | Khu phố (biến giờ) | `bg_city_neighborhood_*` | ✅ có, thiếu 2 ảnh |
+| **M04** | **Điểm kết nối** (quán) | `bg_restaurant_01.jpg` | ⚠️ **đang dùng nhầm tạm** |
+| **M05** | **Viện dưỡng lão** | `bg_office_01`–`05` | ⚠️ **văn phòng ≠ viện dưỡng** |
+| **M06** | Phòng hợp / phòng sếp | `bg_office_05.jpg` | ⚠️ dùng chung với M05 |
 | **M07** | **Thư viện / không gian học tập** | — | ❌ **THIẾU HOÀN TOÀN** |
-| **M08** | **Sân ga** | `train station 1.jpg` | ⚠️ chỉ 1 góc, không có biến giờ |
+| **M08** | **Sân ga** | `bg_train_station_01.jpg` | ⚠️ chỉ 1 góc, không có biến giờ |
 | **M08** | Trạm xe buýt | — | ❌ **thiếu** |
-| **M09** | Công viên | `City/Park *`, `garden blur *` | ✅ có |
-| **M09** | Bãi biển | `dawn beach 1.jpg` | ✅ có |
-| **M09** | Onsen | `onsen 1`, `onsen 3` | ✅ có |
-| **M10** | Không gian mở cuối cùng | `Sky *.png` | ✅ có |
+| **M09** | Công viên | `bg_city_park_*`, `bg_garden_blur_*` | ✅ có |
+| **M09** | Bãi biển | `bg_dawn_beach_01.jpg` | ✅ có |
+| **M09** | Onsen | `bg_onsen_01`, `bg_onsen_03` | ✅ có |
+| **M10** | Không gian mở cuối cùng | `bg_city_sky_*.png` | ✅ có |
 
 ---
 
@@ -154,31 +157,41 @@ Dựa trên `03_MAP_EVENT_FLOW.md`.
 
 | Phân loại | Số | Kích thước |
 |-----------|-----|-----------|
-| Ảnh nhân vật **dùng được** | 20 | 1024×1536 đến 2048×2048 |
-| Tài liệu / bảng tổng hợp | 19 | 800×800 đến 1536×1024 |
+| Ảnh nhân vật **dùng được** | **23** | 1024×1536 đến 2048×2048 |
+| Tài liệu / ảnh chưa xác định | **16** | 800×800 đến 1536×1024 |
 
-**Ảnh dùng được (20):**
+**Ảnh dùng được (23) — sau khi đổi tên:**
 
 | Nhân vật | File | Loại |
 |----------|------|-----|
-| **Dương** | `Dương.jpg`, `Dương quàn áo thường ngày.jpg`, `Dương khóc.jpg`, `Nhân vật Dương.png`, `Dáng đứng của dương.png` | sprite + biểu cảm |
-| **Dương (chibi)** | `chibi Dương.png`, `chibi Dương 3.jpg`, `chuyển động của chibi dương.jpg` | chibi + động |
-| **Dương (chuyển động)** | `Chuyển động của dương.jpg`, `09-EVENT_CG_PACK_03_LIFE_WORK_STUDY (bản tóc đen).png` | CG/event |
-| **Minh** | `Minh.jpg`, `Nhân vật Minh.png` | sprite |
-| **Minh (chibi)** | `chibi minh.png`, `chibi minh 3.jpg`, `chuyển động của chibi minh.jpg` | chibi + động |
-| **Minh (chuyển động)** | `Chuyển động của minh.jpg` | CG/event |
-| **Nam** | `Nam.jpg`, `Nhân vật Nam.png` | sprite |
-| **Nam (chibi)** | `chibi nam.png`, `chibi nam 3.jpg`, `chibi nam ko kính.jpg`, `chuyển động của chibi nam.jpg` | chibi + động |
-| **Nam (chuyển động)** | `Chuyển động của nam.jpg` | CG/event |
+| **Dương** | `char_duong_base.jpg`, `char_duong_daily_outfit.png`, `char_duong_crying.jpg`, `char_duong_standing.png`, `char_duong_sheet.png` | sprite + biểu cảm |
+| **Dương (chibi)** | `char_duong_chibi_01.png`, `char_duong_chibi_02.jpg`, `char_duong_chibi_anim.jpg` | chibi + động |
+| **Dương (chuyển động)** | `char_duong_anim.jpg`, `char_duong_cg_pack03_blackhair.png` | CG/event |
+| **Minh** | `char_minh_base.jpg`, `char_minh_sheet.png` | sprite |
+| **Minh (chibi)** | `char_minh_chibi_01.png`, `char_minh_chibi_02.jpg`, `char_minh_chibi_anim.jpg` | chibi + động |
+| **Minh (chuyển động)** | `char_minh_anim.jpg` | CG/event |
+| **Nam** | `char_nam_base.jpg`, `char_nam_sheet.png` | sprite |
+| **Nam (chibi)** | `char_nam_chibi_01.png`, `char_nam_chibi_02.jpg`, `char_nam_chibi_noglasses.png`, `char_nam_chibi_anim.jpg` | chibi + động |
+| **Nam (chuyển động)** | `char_nam_anim.jpg` | CG/event |
 
-**Tài liệu tham khảo (19):** `1.1`–`1.8.png`, `Character Sheet cho Nam + Minh (bản lỗi).png`, `Bảng tài nguyên tổng hợp.png`, `cuộc trò chuyện.png`, và 7 ảnh tên tự sinh (`ChatGPT Image …`, `Copilot_…`, `Gemini_Generated_Image_…`).
+**Tài liệu / ảnh chưa xác định (16) — giữ nguyên tên, không đưa vào build:**
+
+| Nhóm | Số | File |
+|------|----|------|
+| Bảng số | 8 | `1.1.png` – `1.8.png` |
+| Character sheet | 1 | `Character Sheet cho Nam + Minh( bản lỗi).png` |
+| Bảng tổng hợp | 1 | `Bảng tài nguyên tổng hợp.png` |
+| Minh họa hội thoại | 1 | `cuộc trò chuyện.png` |
+| Ảnh tên tự sinh | 5 | `ChatGPT Image …` ×2, `Copilot_…`, `Gemini_Generated_Image_…` ×2 |
+
+> ⚠️ 5 ảnh tên tự sinh **không xác định được nội dung** vì tên file không mang thông tin. Không dùng vào game cho tới khi mở ra kiểm tra. Nếu là nhân vật → chuyển sang nhóm dùng được và đổi tên.
 
 ### 08.02.2 — ⚠️ Ba vấn đề nghiêm trọng
 
 | # | Vấn đề | Hệ quả |
 |---|--------|--------|
-| **1** | **Có 2 phiên bản tóc Dương** — `09-EVENT_CG_PACK_03_... (bản tóc đen).png` và các ảnh Dương còn lại | Chưa chốt bản chuẩn. Nếu không chốt, sẽ có 2 Dương khác nhau trong cùng game |
-| **2** | **`Character Sheet cho Nam + Minh (bản lỗi).png`** — chính tên file ghi "bản lỗi" | Dùng làm chuẩn tham chiếu sẽ **nhân bản cả lỗi**. Phải tìm bản đúng ở `Pack Tổng/01-Character Sheet cho Nam + Minh.png` |
+| **1** | **Có 2 phiên bản tóc Dương** — `char_duong_cg_pack03_blackhair.png` và các ảnh Dương còn lại | Chưa chốt bản chuẩn. Nếu không chốt, sẽ có 2 Dương khác nhau trong cùng game |
+| **2** | **`Character Sheet cho Nam + Minh( bản lỗi).png`** — chính tên file ghi "bản lỗi" | Dùng làm chuẩn tham chiếu sẽ **nhân bản cả lỗi**. Phải tìm bản đúng ở `Pack Tổng/01-Character Sheet cho Nam + Minh.png` |
 | **3** | **Không có Annika** | Nhân vật có vai trò chuyển Arc 3 (`A3_C02`, `A3_C05`, `A3_C11`) nhưng **chưa có ảnh nào** |
 
 > 🚨 Vấn đề #2 nguy hiểm vì "bản lỗi" là tên file do người khác đặt — ai đó **đã nhìn thấy lỗi này**. Phải mở 2 bản so sánh trước khi chốt.
@@ -269,16 +282,16 @@ Xếp theo mức độ chặn. **Không tạo gì cả trong danh sách này cho
 |---|-------|-------|-------|
 | **A1** | **M07 — không gian học tập / thư viện** | L05, L08, V14, A22 | ❌ **Thiếu hoàn toàn — 0 ảnh.** Là route STUDY của Arc 3. Không có thì nhánh E04 không dựng được. |
 | **A2** | **`CHAR_ANNIKA`** | A3_C05, A3_C11 | Nhân vật quyết định 2 route lớn mà chưa có ảnh nào |
-| **A3** | **M05 — nội thất viện dưỡng lão** | A3_C02, A3_C05 | Chỉ có `office 1–5` là **văn phòng**. Sảnh, kho thuốc, bếp viện, phòng bệnh, phòng sếp — **không có ảnh nào đúng** |
+| **A3** | **M05 — nội thất viện dưỡng lão** | A3_C02, A3_C05 | Chỉ có `bg_office_01`–`bg_office_05` là **văn phòng**. Sảnh, kho thuốc, bếp viện, phòng bệnh, phòng sếp — **không có ảnh nào đúng** |
 | **A4** | **Biểu cảm đủ bộ** | 30 CG | F07 cần 3 biến thể · R08 cần 3 · L06 cần 3 composition khác nhau. Hiện có **3** biểu cảm khóc/mệt |
 
 ### 08.04.2 — 🟠 Quan trọng
 
 | # | Thiếu | Chặn | Lý do |
 |---|-------|-------|-------|
-| **B1** | **M04 — quán cà phê** | A2_C04, A2_C06 | Đang dùng `restaurant 1.jpg` tạm — hình bàn ăn, **sai ngữ cảnh** (M04 giờ là điểm kết nối qua màn hình) |
+| **B1** | **M04 — quán cà phê** | A2_C04, A2_C06 | Đang dùng `bg_restaurant_01.jpg` tạm — hình bàn ăn, **sai ngữ cảnh** (M04 giờ là điểm kết nối qua màn hình) |
 | **B2** | **Trạm xe buýt** | `A1_C07` — Một ngày không ăn | Chương có key moment ở trạm xe buýt, **không có ảnh nào**. Dùng cầu thang máy bay sẽ phá mood |
-| **B3** | **M01 — biến thể ban đêm** | Arc 1–2 | Có `FREE_BG_2_night` nhưng chỉ 1 góc. Arc 1–2 chủ yếu diễn vào **ban đêm** |
+| **B3** | **M01 — biến thể ban đêm** | Arc 1–2 | Có `bg_free_02_night.png` nhưng chỉ 1 góc. Arc 1–2 chủ yếu diễn vào **ban đêm** |
 | **B4** | **Outfit layer** | 13 tổ hợp | Xem 08.02.3 |
 | **B5** | **7 ảnh City thiếu biến giờ** | M03, M09 | Xem bảng 08.01.2 |
 | **B6** | **Sprite mẹ Dương** | A3_C03, A3_C10 | Có character sheet nhưng chưa có sprite |
@@ -288,19 +301,18 @@ Xếp theo mức độ chặn. **Không tạo gì cả trong danh sách này cho
 | # | Thiếu | Ghi chú |
 |---|-------|---------|
 | **C1** | Toàn bộ asset UI | Xem `07_UI_HUD.md` 07.13 — 10 nhóm, **rẻ nhất để tạo, ảnh hưởng lớn nhất** |
-| **C2** | Chibi Nam có/không kính | `chibi nam ko kính.png` tồn tại → chắc chắn cần cả 2 phiên bản |
+| **C2** | Chibi Nam có/không kính | `char_nam_chibi_noglasses.png` tồn tại → chắc chắn cần cả 2 phiên bản |
 | **C3** | 2 ảnh `outside` của Spiral Atlas chưa có nét | Xem 08.01.3 |
-| **C4** | `bedroom 1`/`bedroom 2` crop lại 1920 | Xem 08.01.1 |
-| **C5** | 30 đạo cụ | `06-PROPS PACK` có bản vẽ — cần cắt thành file riêng |
+| **C4** | `bg_bedroom_01`/`02` crop lại 1920 | Xem 08.01.1 |
+| **C5** | 30 đạo cụ | `Pack Tổng/06-PROPS PACK` có bản vẽ — cần cắt thành file riêng |
 
 ### 08.04.4 — Không cần tạo
 
-| Nhóm | Lý do |
-|------|-------|
-| 28 bảng `Pack Tổng/` | Chỉ là tham khảo |
-| 15 file `__MACOSX/` | Rác |
-| `.DS_Store` | Rác |
-| 7 ảnh tên tự sinh trong `tệp ảnh nhân vật/` | Không xác định được nội dung → giữ ở `refs/`, không dùng |
+| Nhóm | Số | Lý do |
+|------|----|-------|
+| 28 bảng `Pack Tổng/` | 28 | Chỉ là tham khảo |
+| 15 file `__MACOSX/` + 1 `.DS_Store` | 16 | **Đã xoá 02/10/2026** |
+| 16 ảnh tài liệu trong `tệp ảnh nhân vật/` | 16 | Không phải asset game — giữ nguyên tên để đối chiếu |
 
 ---
 
@@ -325,13 +337,14 @@ Xếp theo mức độ chặn. **Không tạo gì cả trong danh sách này cho
 
 ### 08.05.2 — 🟠 CHƯA XÁC MINH ĐƯỢC
 
-**110 ảnh còn lại** (43 + 28 + 39) **không có file license nào trong kho.**
+**138 ảnh còn lại** (149 − 11 ảnh Spiral Atlas) **không có file license nào trong kho.**
+Trong đó **94 ảnh dùng được** (43 + 28 + 23) và **44 ảnh tham khảo** (28 + 16).
 
-Tên file cho thấy nhiều nguồn khác nhau: `FREE_BG_*` (gợi ý miễn phí), `ChatGPT Image …`, `Gemini_Generated_Image_…`, `Copilot_…`.
+Tên file cho thấy nhiều nguồn khác nhau: `bg_free_*` (gợi ý miễn phí), `ChatGPT Image …`, `Gemini_Generated_Image_…`, `Copilot_…`.
 
 > ⚠️ **Đây là rủi ro thật, không phải cảnh báo hình thức.**
 > - Ảnh AI tạo: điều khoản thương mại phụ thuộc từng nền tảng và thời điểm.
-> - Ảnh `FREE_BG_*`: chữ "FREE" trong tên **không phải** bằng chứng cấp phép.
+> - Ảnh `bg_free_*`: chữ "free" trong tên **không phải** bằng chứng cấp phép.
 > - Tên có khoảng trắng và viết hoa kiểu người dùng tải từ web → rất dễ đến từ asset pack không rõ giấy phép.
 
 **Hành động bắt buộc trước khi phát hành bất kỳ bản nào:**
@@ -346,12 +359,16 @@ Tên file cho thấy nhiều nguồn khác nhau: `FREE_BG_*` (gợi ý miễn ph
 
 ## 08.06 — QUY ƯỚC ĐẶT TÊN FILE
 
-Tên file hiện tại không dùng được: tiếng Việt có dấu, khoảng trắng, viết hoa không nhất quán, `FREE_BG`, `ChatGPT Image 20_15_55 21 thg 8, 2026`.
+Tên file cũ không dùng được: tiếng Việt có dấu, khoảng trắng, viết hoa không nhất quán, `FREE_BG`, `ChatGPT Image 20_15_55 21 thg 8, 2026`.
+
+> ✅ **Đã áp dụng ngày 02/10/2026.** 105 asset đã được đổi sang quy ước dưới đây — xem bảng đầy đủ ở **08.09**.
+> 44 ảnh tham khảo (`Pack Tổng/` + 16 ảnh trong `tệp ảnh nhân vật/`) **giữ nguyên tên** để còn đối chiếu được với tài liệu gốc.
 
 | Loại | Quy ước | Ví dụ |
 |------|---------|-------|
-| Background | `bg_<map>_<room>_<time>.png` | `bg_m01_bedroom_night.png` |
-| Nhân vật | `char_<id>_<outfit>_<exp>.png` | `char_duong_casual_tired.png` |
+| Background | `bg_<theme>_<nn>[_<time>].<ext>` | `bg_bedroom_03.jpg` · `bg_city_downtown_01_night.png` |
+| Background CC BY | `bg_sa_<room>.jpg` | `bg_sa_hallway.jpg` |
+| Nhân vật | `char_<id>_<variant>.<ext>` | `char_duong_base.jpg` |
 | CG | `cg_<chapter>_<nn>.png` | `cg_a2_c06_01.png` |
 | UI | `ui_<element>_<state>.png` | `ui_app_msg_ico.png` |
 | VFX | `vfx_<id>_<name>.png` | `vfx_v13_overload.png` |
@@ -360,8 +377,11 @@ Tên file hiện tại không dùng được: tiếng Việt có dấu, khoảng
 **Quy tắc bắt buộc:**
 - Chỉ `a-z`, `0-9`, `_`, `-`.
 - Không khoảng trắng. Không dấu. Không ký tự đặc biệt.
-- `time ∈ {day, afternoon, night, blank}`.
+- `time ∈ {day, afternoon, night, sunset}`.
+- Tiền tố `bg_sa_` = **bắt buộc ghi credit CC BY 4.0**. Xem 08.05.1.
 - Tên phải đọc được **không cần mở file**.
+
+> 💡 Vì sao chưa gán `m01`, `m02`… vào tên? Vì **chưa ai xác nhận** ảnh nào thuộc map nào — đó là quyết định của người làm game, không phải suy ra từ tên file cũ. Khi map được chốt, chuyển `bg_<theme>` → `bg_<map>_<room>` bằng một lệnh đổi tên hàng loạt.
 
 ---
 
@@ -371,7 +391,7 @@ Kèm theo `02_GAMEPLAY_SYSTEM.md` 02.13.
 
 | Bước | Làm gì | Tại sao trước |
 |------|--------|---------------|
-| **1** | Chuẩn hoá tên file + dọn `__MACOSX` | Không tốn công vẽ, làm sạch mọi việc sau |
+| **1** | ~~Chuẩn hoá tên file + dọn `__MACOSX`~~ **✅ xong 02/10** | Không tốn công vẽ, làm sạch mọi việc sau |
 | **2** | Tạo `CREDITS.md` | Bắt buộc pháp lý, tốn 15 phút |
 | **3** | Asset UI (10 nhóm trong 07.13) | Rẻ nhất, ảnh hưởng lớn nhất |
 | **4** | Bổ sung 7 ảnh City còn thiếu | Hoàn thiện hệ thống khung giờ |
@@ -391,15 +411,137 @@ Kèm theo `02_GAMEPLAY_SYSTEM.md` 02.13.
 | Chỉ số | Giá trị |
 |--------|---------|
 | Tổng số file ảnh trong kho | **149** |
-| Ảnh dùng được | **121** |
-| Bảng tham khảo | **28** |
-| File rác (`__MACOSX`) | **15** + 1 `.DS_Store` |
-| Ảnh sai tỉ lệ | **2** (`bedroom 1`, `bedroom 2`) |
-| Map cần có | **10** — thiếu hẳn **1**, thiếu nội thất **2** |
-| Nhân vật cần có | **5** — thiếu **2** |
+| Ảnh dùng được | **105** (82 background + 23 nhân vật) |
+| Ảnh tham khảo | **44** (28 `Pack Tổng` + 16 tài liệu) |
+| File rác | **16** — **đã xoá 02/10/2026** |
+| Đã đổi tên chuẩn | **105** — git nhận `R100` |
+| Ảnh sai tỉ lệ | **2** (`bg_bedroom_01`, `bg_bedroom_02`) |
+| Map cần có | **10** — thiếu hẳn **1** (M07), thiếu nội thất **2** (M04, M05) |
+| Nhân vật cần có | **5** — thiếu **2** (Annika, mẹ Dương) |
 | Có license rõ ràng | **11** (CC BY 4.0) |
-| **Chưa xác minh license** | **110** ⚠️ |
+| **Chưa xác minh license** | **138** ⚠️ |
 | Asset chặn tiến độ | **4** |
+
+## 08.09 — PHỤ LỤC: BẢNG ĐỔI TÊN FILE
+
+Toàn bộ 105 asset đã được đổi tên ngày **02/10/2026**. Bảng dưới giữ lại tên cũ để nhận ra asset khi đối chiếu với tài liệu gốc hoặc Pack Tổng/.
+
+> Git ghi nhận **105/105 là R100** — đổi tên thuần, không thay đổi nội dung ảnh.
+
+### tệp ảnh background — 82 file
+
+| Tên cũ | Tên mới |
+|--------|---------|
+| `Downtown 1 Afternoon.png` | `bg_city_downtown_01_afternoon.png` |
+| `Downtown 1 Day.png` | `bg_city_downtown_01_day.png` |
+| `Downtown 1 Night Light.png` | `bg_city_downtown_01_night.png` |
+| `Downtown 2 Afternoon.png` | `bg_city_downtown_02_afternoon.png` |
+| `Downtown 2 Day.png` | `bg_city_downtown_02_day.png` |
+| `Downtown 2 Night Light.png` | `bg_city_downtown_02_night.png` |
+| `Downtown 3 Afternoon.png` | `bg_city_downtown_03_afternoon.png` |
+| `Downtown 3 Day.png` | `bg_city_downtown_03_day.png` |
+| `Downtown 3 Night Light.png` | `bg_city_downtown_03_night.png` |
+| `Neighborhood 1 Afternoon.png` | `bg_city_neighborhood_01_afternoon.png` |
+| `Neighborhood 1 Day.png` | `bg_city_neighborhood_01_day.png` |
+| `Neighborhood 2 Afternoon.png` | `bg_city_neighborhood_02_afternoon.png` |
+| `Neighborhood 2 Day.png` | `bg_city_neighborhood_02_day.png` |
+| `Neighborhood 2 Night Light.png` | `bg_city_neighborhood_02_night.png` |
+| `Neighborhood 3 Afternoon.png` | `bg_city_neighborhood_03_afternoon.png` |
+| `Neighborhood 3 Day.png` | `bg_city_neighborhood_03_day.png` |
+| `Neighborhood 3 Night Light.png` | `bg_city_neighborhood_03_night.png` |
+| `Park 1 Afternoon.png` | `bg_city_park_01_afternoon.png` |
+| `Park 1 Day.png` | `bg_city_park_01_day.png` |
+| `Park 1 Night Light.png` | `bg_city_park_01_night.png` |
+| `Park 2 Night Light.png` | `bg_city_park_02_night.png` |
+| `Park 3 Afternoon.png` | `bg_city_park_03_afternoon.png` |
+| `Park 3 Day.png` | `bg_city_park_03_day.png` |
+| `Park 3 Night Light.png` | `bg_city_park_03_night.png` |
+| `Playground 3 Day.png` | `bg_city_playground_03_day.png` |
+| `Sky Afternoon Day.png` | `bg_city_sky_afternoon.png` |
+| `Sky Day Day.png` | `bg_city_sky_day.png` |
+| `Sky Night Day.png` | `bg_city_sky_night.png` |
+| `bedroom 1.jpg` | `bg_bedroom_01.jpg` |
+| `bedroom 2.jpg` | `bg_bedroom_02.jpg` |
+| `bedroom 3.jpg` | `bg_bedroom_03.jpg` |
+| `bedroom 4.jpg` | `bg_bedroom_04.jpg` |
+| `bedroom 5.jpg` | `bg_bedroom_05.jpg` |
+| `bedroom 6.jpg` | `bg_bedroom_06.jpg` |
+| `bedroom 7.jpg` | `bg_bedroom_07.jpg` |
+| `Kitchen 1.jpg` | `bg_kitchen_01.jpg` |
+| `kitchen 2.jpg` | `bg_kitchen_02.jpg` |
+| `kitchen 3.jpg` | `bg_kitchen_03.jpg` |
+| `kitchen 4.jpg` | `bg_kitchen_04.jpg` |
+| `office 1.jpg` | `bg_office_01.jpg` |
+| `office 2.jpg` | `bg_office_02.jpg` |
+| `office 3.jpg` | `bg_office_03.jpg` |
+| `office 4.jpg` | `bg_office_04.jpg` |
+| `office 5.jpg` | `bg_office_05.jpg` |
+| `street 1.jpg` | `bg_street_01.jpg` |
+| `street 2.jpg` | `bg_street_02.jpg` |
+| `street 3.jpg` | `bg_street_03.jpg` |
+| `street 4.jpg` | `bg_street_04.jpg` |
+| `train 1.jpg` | `bg_train_01.jpg` |
+| `train 2.jpg` | `bg_train_02.jpg` |
+| `train 3.jpg` | `bg_train_03.jpg` |
+| `inside train 1.jpg` | `bg_train_interior_01.jpg` |
+| `clothing shop 1.jpg` | `bg_clothing_shop_01.jpg` |
+| `clothing shop blur 1.jpg` | `bg_clothing_shop_blur_01.jpg` |
+| `restaurant 1.jpg` | `bg_restaurant_01.jpg` |
+| `mall 1.jpg` | `bg_mall_01.jpg` |
+| `mall 2.jpg` | `bg_mall_02.jpg` |
+| `cherry street 1.jpg` | `bg_cherry_street_01.jpg` |
+| `cherry street blur 1.jpg` | `bg_cherry_street_blur_01.jpg` |
+| `garden blur 1.jpg` | `bg_garden_blur_01.jpg` |
+| `garden blur 2.jpg` | `bg_garden_blur_02.jpg` |
+| `dawn beach 1.jpg` | `bg_dawn_beach_01.jpg` |
+| `onsen 1.jpg` | `bg_onsen_01.jpg` |
+| `onsen 3.jpg` | `bg_onsen_03.jpg` |
+| `onsen blur 1.jpg` | `bg_onsen_blur_01.jpg` |
+| `train station 1.jpg` | `bg_train_station_01.jpg` |
+| `FREE_BG_1.png` | `bg_free_01.png` |
+| `FREE_BG_2.png` | `bg_free_02.png` |
+| `FREE_BG_2_night.png` | `bg_free_02_night.png` |
+| `FREE_BG_2_sunset.png` | `bg_free_02_sunset.png` |
+| `FREE_BG_3.png` | `bg_free_03.png` |
+| `entrance.jpg` | `bg_sa_entrance.jpg` |
+| `hallway.jpg` | `bg_sa_hallway.jpg` |
+| `dining.jpg` | `bg_sa_dining.jpg` |
+| `dining_kitchen.jpg` | `bg_sa_dining_kitchen.jpg` |
+| `kitchen.jpg` | `bg_sa_kitchen.jpg` |
+| `lounge.jpg` | `bg_sa_lounge.jpg` |
+| `bathroom.jpg` | `bg_sa_bathroom.jpg` |
+| `master bedroom.jpg` | `bg_sa_master_bedroom.jpg` |
+| `single bedroom.jpg` | `bg_sa_single_bedroom.jpg` |
+| `outside1.jpg` | `bg_sa_outside_01.jpg` |
+| `outside2.jpg` | `bg_sa_outside_02.jpg` |
+
+### tệp ảnh nhân vật — 23 file
+
+| Tên cũ | Tên mới |
+|--------|---------|
+| `Dương.jpg` | `char_duong_base.jpg` |
+| `Dương quàn áo thường ngày.png` | `char_duong_daily_outfit.png` |
+| `Dương khóc.jpg` | `char_duong_crying.jpg` |
+| `Dáng đứng của dương.png` | `char_duong_standing.png` |
+| `chibi Dương.png` | `char_duong_chibi_01.png` |
+| `chibi Dương 3.jpg` | `char_duong_chibi_02.jpg` |
+| `chuyển động của chibi dương.jpg` | `char_duong_chibi_anim.jpg` |
+| `Chuyển động của dương.jpg` | `char_duong_anim.jpg` |
+| `Minh.jpg` | `char_minh_base.jpg` |
+| `chibi minh.png` | `char_minh_chibi_01.png` |
+| `chibi minh 3.jpg` | `char_minh_chibi_02.jpg` |
+| `chuyển động của chibi minh.jpg` | `char_minh_chibi_anim.jpg` |
+| `Chuyển động của minh.jpg` | `char_minh_anim.jpg` |
+| `Nam.jpg` | `char_nam_base.jpg` |
+| `chibi nam.png` | `char_nam_chibi_01.png` |
+| `chibi nam 3.jpg` | `char_nam_chibi_02.jpg` |
+| `chibi nam ko kính.png` | `char_nam_chibi_noglasses.png` |
+| `chuyển động của chibi nam.jpg` | `char_nam_chibi_anim.jpg` |
+| `Chuyển động của nam.jpg` | `char_nam_anim.jpg` |
+| `Nhân vật Dương.png` | `char_duong_sheet.png` |
+| `Nhân vật Minh.png` | `char_minh_sheet.png` |
+| `Nhân vật Nam.png` | `char_nam_sheet.png` |
+| `09-EVENT_CG_PACK_03_LIFE_WORK_STUDY (bản tóc đen).png` | `char_duong_cg_pack03_blackhair.png` |
 
 ---
 

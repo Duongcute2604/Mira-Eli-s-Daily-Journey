@@ -62,7 +62,7 @@
 | **Ước mơ** | Bác sĩ hoặc nhà nghiên cứu |
 | **Vai trò** | Em gái — **người nhìn thấy điều Dương né** |
 
-**Ngoại hình:** nhỏ hơn Dương rõ rệt. Asset có chibi riêng (`chibi minh.png`) và chibi 2048×2048.
+**Ngoại hình:** nhỏ hơn Dương rõ rệt. Asset có chibi riêng (`char_minh_chibi_01.png`, `char_minh_chibi_02.jpg`) và chibi 2048×2048.
 
 **Tính cách:**
 - Không phản đối mạnh — vì vậy thói quen của Dương trông "bình thường" và không ai sửa.
@@ -89,7 +89,7 @@
 | **Mục tiêu** | Học thạc sĩ ở Thụy Điển để sang gặp Dương |
 | **Vai trò** | Bạn trai yêu xa 5 năm — **chỉ qua điện thoại** |
 
-**Ngoại hình:** asset có `chibi nam.png` và `chibi nam ko kính.png` (bản không đeo kính) — phải chốt một bản.
+**Ngoại hình:** asset có `char_nam_chibi_01.png` và `char_nam_chibi_noglasses.png` (bản không đeo kính) — phải chốt một bản.
 
 **Tính cách:**
 - **Kiên nhẫn đến mức nguy hiểm.** Anh giữ máy cả buổi chiều chờ khung giờ của Dương.

@@ -219,7 +219,7 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] T1.4k `docs/06_CHARACTER_STYLE.md` — **pack bị thiếu**
 - [x] T1.4l `docs/07_UI_HUD.md` — **pack bị thiếu**
 - [x] T1.4m `docs/08_ASSET_MANIFEST.md` — **pack bị thiếu**, liệt kê asset thiếu
-- [ ] T1.5 dọn `__MACOSX` + chuẩn hoá tên file
+- [x] T1.5 dọn `__MACOSX` + chuẩn hoá tên file
 - [ ] T1.6 `CREDITS.md`
 
 ### Phase 2 — Vertical Slice (đúng theo `03.07` và `02.13`)
