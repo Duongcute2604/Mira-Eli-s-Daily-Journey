@@ -154,7 +154,7 @@ Các bước tiếp theo theo thứ tự ưu tiên:
 | 3 | **Prototype vertical slice** `A1_C01 → A1_C06 → A1_C09` | Tài liệu G2 chỉ rõ phải làm slice trước |
 | 4 | Bổ sung asset còn thiếu: thư viện (M07), quán cà phê (M04), nội thất viện dưỡng (M05) | Chi tiết ở `08_ASSET_MANIFEST.md` |
 
-> ⚠️ **Chưa được code trước khi asset và license đã xong.** 139/149 ảnh chưa verify license — phát hành công khai lúc này là rủi ro pháp lý.
+> ⚠️ **Chưa được code trước khi asset và license đã xong.** 138/149 ảnh chưa verify license — phát hành công khai lúc này là rủi ro pháp lý.
 
 ---
 

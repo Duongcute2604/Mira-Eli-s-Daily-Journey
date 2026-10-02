@@ -195,15 +195,15 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] **T1.1** Chốt PREMISE ✅
 - [x] **T1.2** Chốt bộ STAT ✅
 - [x] **T1.3** Chốt bộ ENDING ✅ (9 ending E01–E09, ngưỡng lấy từ STORY_BIBLE)
-- [ ] **T1.4** Viết lại 11 pack ra `.md` ← *đang làm (4/13 xong: a, c, d, e)*
-- [ ] **T1.5** Xoá `__MACOSX`, chuẩn hoá tên file asset
-- [ ] **T1.6** Bổ sung `CREDITS.md` cho toàn bộ asset
+- [x] **T1.4** Viết lại 11 pack ra `.md` ✅ **13/13**
+- [x] **T1.5** Xoá `__MACOSX`, chuẩn hoá tên file asset ✅
+- [x] **T1.6** Bổ sung `CREDITS.md` cho toàn bộ asset ✅
 
 ---
 
 ## 7. KẾ HOẠCH TRIỂN KHAI
 
-### Phase 1 — Chuyển thiết kế sang .md (đang làm)
+### Phase 1 — Chuyển thiết kế sang .md ✅ **HOÀN THÀNH 02/10/2026**
 
 - [x] T1.1 / T1.2 / T1.3 — chốt quyết định
 - [x] T1.4a `docs/CANON_DECISIONS.md` — bản ghi quyết định + giá trị khởi tạo biến
@@ -220,7 +220,7 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] T1.4l `docs/07_UI_HUD.md` — **pack bị thiếu**
 - [x] T1.4m `docs/08_ASSET_MANIFEST.md` — **pack bị thiếu**, liệt kê asset thiếu
 - [x] T1.5 dọn `__MACOSX` + chuẩn hoá tên file
-- [ ] T1.6 `CREDITS.md`
+- [x] T1.6 `CREDITS.md`
 
 ### Phase 2 — Vertical Slice (đúng theo `03.07` và `02.13`)
 
@@ -304,4 +304,30 @@ Kết quả:
 
 Chưa viết dòng code nào. Đúng theo nguyên tắc "Lập kế hoạch trước khi code" — hiện đang ở Phase 1 (chốt thiết kế), chưa nên code vì 3 blocker (premise, stat, ending) chưa giải quyết.
 
-Bài học xem `lessons.md`.
+**2026-10-02 — Hoàn thành Phase 1: 13 pack `.md` + dọn asset + `CREDITS.md`.**
+
+Viết mới / viết lại:
+| Kết quả | Chi tiết |
+|---------|----------|
+| 13 file `.md` trong `docs/` | 11 pack từ `.docx` + 3 pack bị thiếu (06/07/08) + `CANON_DECISIONS.md` |
+| 31 chương | `01_STORY.md`, trong đó 6 chương sửa theo Q1 |
+| 20 choice | `10_CHOICE_BRANCHING.md`, mỗi choice có delta số cụ thể |
+| 33 object lưu save | `09_SYSTEM_VARIABLES.md` (27 object Tầng 1–2 + 6 derived) |
+| 9 ending | `11_ENDING.md`, có pseudo-code resolver + 9 kịch bản test |
+| 30 CG / 20 VFX / 30 audio | `04_` + `05_` |
+| 10 map | `03_MAP_EVENT_FLOW.md`, sửa M04/M05/M08, thêm A3_C12 |
+
+Dọn asset:
+| Việc | Kết quả |
+|------|---------|
+| Xoá file rác | **16** (15 `__MACOSX` + 1 `.DS_Store`) |
+| Chuẩn hoá tên file | **105** — git nhận `R100` (rename thuần, không đổi nội dung) |
+| Giữ nguyên | 44 ảnh tham khảo + 2 file license Spiral Atlas |
+| `CREDITS.md` | Tạo mới — bắt buộc vì 11 ảnh CC BY 4.0 |
+
+Số liệu kho (đo trực tiếp, không chép tài liệu gốc):
+- **149** ảnh = **105 dùng được** + **44 tham khảo**
+- **138** ảnh chưa xác minh được license ⚠️
+- **4** asset chặn tiến độ: M07 thư viện, CHAR_ANNIKA, M05 viện dưỡng lão, bộ biểu cảm
+
+Bài học xem `lessons.md` (L001–L017).
