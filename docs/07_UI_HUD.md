@@ -255,7 +255,7 @@ Ba thẻ: Nam / Minh / Annika. Mỗi thẻ tích luỹ dòng thông tin theo `FL
 
 ### 07.04.3 — Lựa chọn quan trọng
 
-Ghi lại 20 choice (`10_CHOICE_BRANCHING.md`) bằng **ngôn ngữ narrative**:
+Ghi lại 22 choice (`10_CHOICE_BRANCHING.md`) bằng **ngôn ngữ narrative**:
 
 ```
 A2_C06 — "Con đã nói dối mẹ."
@@ -328,7 +328,7 @@ A2_C06 — "Con đã nói dối mẹ."
 
 | Luật | Giải thích |
 |------|------------|
-| Tối đa **3** lựa chọn | 4+ gây tê liệt quyết định |
+| Tối đa **4** lựa chọn | 5+ gây tê liệt quyết định (D-002) |
 | Không đánh số, không icon | Số thứ tự tự nhiên = thứ tự người viết muốn |
 | Không màu "tốt" / "xấu" | Xem 10.05.7 |
 | Lựa chọn tốn tài nguyên | Mọi lựa chọn đều phải có giá — kể cả lựa chọn "im lặng" |

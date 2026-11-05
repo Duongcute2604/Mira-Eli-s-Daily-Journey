@@ -483,7 +483,7 @@ ARC 3: LIFE/WORK/STUDY (A3_C01–C12)
 ENDING RESOLVER → E01…E09
 ```
 
-**Tổng: 31 chương.** 20 choice. 9 ending group.
+**Tổng: 31 chương.** 22 choice. 9 ending group.
 
 ### Nhóm kết thúc (chi tiết ở `11_ENDING.md`)
 

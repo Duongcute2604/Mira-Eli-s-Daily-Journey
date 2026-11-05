@@ -1,7 +1,7 @@
 # TODO — Hành Trình Của Mira Eli
 
 > Ngày audit: 02/10/2026
-> Trạng thái: **Phase 0 — Design complete, chưa có code**
+> Trạng thái: **Phase 1 xong — thiết kế đã chốt, chưa có code.** Phase 2 (vertical slice) chưa bắt đầu.
 
 ---
 
@@ -199,6 +199,24 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] **T1.5** Xoá `__MACOSX`, chuẩn hoá tên file asset ✅
 - [x] **T1.6** Bổ sung `CREDITS.md` cho toàn bộ asset ✅
 
+### 6.3. Quyết định 05/11/2026 — sau rà soát lần 2
+
+Bốn câu treo từ lần rà soát này đã được chốt. Chi tiết đầy đủ ở `CANON_DECISIONS.md` §5.
+
+| Mã | Quyết định | Ảnh hưởng |
+|----|-----------|-----------|
+| **D-001** | Choice chính thức là **22** (không phải 20) | Sửa `00`, `01`, `09`, `10` |
+| **D-002** | Lựa chọn tối đa **4** trên một màn | Sửa `07_UI_HUD` 07.06.2 |
+| **D-003** | Mốc phong cách hình ảnh là **Họ C — 3D painterly** (`bg_city_*`) | `08`, luật G3 |
+| **D-004** | **Giữ minigame** — 3 cái (MG1–MG3), từ Arc 2, không có trong slice | `02`, `03`, luật M1–M6 |
+
+Hai file mới sinh ra từ lần rà soát này:
+
+| File | Nội dung | Dùng khi nào |
+|------|----------|--------------|
+| `docs/12_RULES.md` | **36 luật thi công** — stack, dữ liệu, nội dung, công việc, quy mô, hình ảnh, minigame | Trước khi viết dòng code đầu tiên, và mỗi lần thêm một loại việc mới |
+| `docs/13_QUICKREF.md` | **Bảng tra cứu** — hằng số đã chốt, ID, cần biết gì thì mở file nào | Mỗi lần vào code, để không phải đọc lại 17 file |
+
 ---
 
 ## 7. KẾ HOẠCH TRIỂN KHAI
@@ -210,7 +228,7 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] T1.4b `docs/00_OVERVIEW.md` — mục lục + pitch + 8 nguyên tắc thiết kế
 - [x] T1.4c `docs/01_STORY.md` — 31 chương, sửa 6 chương Nam
 - [x] T1.4d `docs/09_SYSTEM_VARIABLES.md` — 27 object (canonical) + delta STORY_BIBLE + ngưỡng ending
-- [x] T1.4e `docs/10_CHOICE_BRANCHING.md` — 20 choice + delta số cụ thể
+- [x] T1.4e `docs/10_CHOICE_BRANCHING.md` — 22 choice + delta số cụ thể
 - [x] T1.4f `docs/02_GAMEPLAY_SYSTEM.md` — core loop, chapter template, phone + múi giờ, save, build order
 - [x] T1.4g `docs/03_MAP_EVENT_FLOW.md` — 10 map, sửa M04/M08 long-distance, thêm A3_C12
 - [x] T1.4h `docs/04_CG_PLACEMENT.md` — 30 CG, sửa R02/R04/R06/R09/L04/L09 theo long-distance, sửa R03 về map M01
@@ -223,6 +241,9 @@ M04 Café và M08 Transit phải đổi bản chất:
 - [x] T1.6 `CREDITS.md`
 
 ### Phase 2 — Vertical Slice (đúng theo `03.07` và `02.13`)
+
+> Trước khi làm bất kỳ task nào dưới đây: mở `13_QUICKREF.md`, rồi `12_RULES.md`.
+> Slice **không có minigame** (luật M6). Thêm tính năng ngoài `A1_C01 → A1_C09` là phá Phase 2.
 
 Tài liệu G2 đã chỉ rõ: **prototype một vertical slice trước — `A1_C01 → A1_C06 → A1_C09`**
 
@@ -254,7 +275,9 @@ Tài liệu G2 đã chỉ rõ: **prototype một vertical slice trước — `A1
 
 ---
 
-## 7. MÂU THUẪN CẦN GIẢI QUYẾT
+## 8. MÂU THUẪN CẦN GIẢI QUYẾT — ảnh chụp 02/10/2026
+
+> ⚠️ **Mục này là lịch sử, không phải danh sách việc đang mở.** 9/11 mục đã được đóng bởi `CANON_DECISIONS.md` và 13 pack `.md`. Chỉ còn #10 và #11, đã sửa trong `03_MAP_EVENT_FLOW.md` bản mới. Mâu thuẫn mới phát hiện sau ngày 05/11/2026 nằm ở issue #13 trên board.
 
 | # | Mâu thuẫn | Nơi | Mức |
 |---|-----------|-----|-----|
@@ -292,7 +315,7 @@ Tài liệu G2 đã chỉ rõ: **prototype một vertical slice trước — `A1
 
 ---
 
-## 8. NHẬT KÝ KẾT QUẢ
+## 9. NHẬT KÝ KẾT QUẢ
 
 **2026-10-02 — Hoàn thành audit toàn bộ tài liệu + asset.**
 
@@ -311,7 +334,7 @@ Viết mới / viết lại:
 |---------|----------|
 | 13 file `.md` trong `docs/` | 11 pack từ `.docx` + 3 pack bị thiếu (06/07/08) + `CANON_DECISIONS.md` |
 | 31 chương | `01_STORY.md`, trong đó 6 chương sửa theo Q1 |
-| 20 choice | `10_CHOICE_BRANCHING.md`, mỗi choice có delta số cụ thể |
+| 22 choice | `10_CHOICE_BRANCHING.md`, mỗi choice có delta số cụ thể |
 | 33 object lưu save | `09_SYSTEM_VARIABLES.md` (27 object Tầng 1–2 + 6 derived) |
 | 9 ending | `11_ENDING.md`, có pseudo-code resolver + 9 kịch bản test |
 | 30 CG / 20 VFX / 30 audio | `04_` + `05_` |

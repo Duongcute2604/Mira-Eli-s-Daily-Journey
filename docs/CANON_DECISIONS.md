@@ -183,8 +183,27 @@ docs/
   07_UI_HUD.md              ← HUD, điện thoại, journal
   08_ASSET_MANIFEST.md      ← asset có / thiếu / license
   09_SYSTEM_VARIABLES.md    ← 27 object (canonical)
-  10_CHOICE_BRANCHING.md    ← 20 choice + delta số
+  10_CHOICE_BRANCHING.md    ← 22 choice + delta số
   11_ENDING.md              ← 9 ending + resolver
+  12_RULES.md               ← 36 luật thi công (cách làm)
+  13_QUICKREF.md            ← bảng tra cứu nhanh
 ```
 
 Nguồn gốc `.docx` giữ nguyên trong `Cốt truyện/` làm tham khảo, **không sửa trong đó nữa** — chỉ sửa bản `.md`.
+
+---
+
+## 5. NHẬT KÝ QUYẾT ĐỊNH
+
+> Mọi thay đổi luật ghi một dòng ở đây, theo mẫu `12_RULES.md` luật H1.
+> Không xoá dòng cũ — dòng bị thay giữ nguyên, đánh dấu `[đã thay bởi D-0xx]`.
+
+| Mã | Ngày | Quyết định | Thay | Lý do | File ảnh hưởng |
+|----|------|-----------|------|-------|----------------|
+| **D-001** | 05/11/2026 | Số choice chính thức là **22** (Arc 1 = 5, Arc 2 = 6, Arc 3 = 11). Mọi chỗ ghi 20 đổi thành 22 | Con số 20 ở `00`, `01`, `09`, `10`, `todo` | Đếm thật trong `10_CHOICE_BRANCHING` ra 22. Bỏ 2 choice đòi viết lại một nhánh | `00_OVERVIEW`, `01_STORY`, `09_SYSTEM_VARIABLES`, `10_CHOICE_BRANCHING`, `todo.md` |
+| **D-002** | 05/11/2026 | Lựa chọn tối đa trên một màn là **4**, không phải 3 | "tối đa 3 lựa chọn" ở `07_UI_HUD` 07.06.2 | `CH_A3_05` đã có 4 lựa chọn; bỏ một lựa chọn ở chương cao trào mất nhiều hơn sửa UI | `07_UI_HUD`, `02_GAMEPLAY_SYSTEM` |
+| **D-003** | 05/11/2026 | Mốc phong cách hình ảnh là **Họ C — 3D painterly** (`bg_city_*`). Ảnh mới phải so với 3 ảnh mốc trước khi nhận | Ghi chú "Spiral Atlas khác phong cách" ở `08_ASSET_MANIFEST` | Kho đang có 3 họ lệch nhau (toon 11 / ảnh thật 43 / painterly 28). Họ C nằm giữa nên kéo được cả hai phía; kéo từ ảnh thật về toon thì không làm được bằng grade | `08_ASSET_MANIFEST`, `12_RULES` G3 |
+| **D-004** | 05/11/2026 | **Giữ minigame**: 3 cái (MG1–MG3), bắt đầu từ Arc 2, không có trong vertical slice | Core loop không có minigame ở `02_GAMEPLAY_SYSTEM` | Minh hoạ trực tiếp chủ đề "quá tải" thay vì chỉ là cổng kỹ năng. Giới hạn bằng M1–M6 để không đội chi phí | `02_GAMEPLAY_SYSTEM`, `03_MAP_EVENT_FLOW`, `12_RULES` §12.10 |
+| **D-005** | 06/11/2026 | **Chốt là ghi và đẩy**: mỗi phương án được chốt phải ghi vào file luật ngay trong lượt đó, rồi commit + push. Quyết định chỉ nằm trong chat coi như chưa có | Cách push cuối buổi ở D3 | Chốt trong chat rồi quên là lý do `todo.md` mục 8 phải ghi chú "đây là lịch sử"; một quyết định không có ngày và không có commit thì không ai kiểm lại được | `12_RULES` D5, `13_QUICKREF` |
+
+**Hệ quả của D-001 đến D-005:** bộ luật thi công nằm ở `12_RULES.md` (36 luật), tra nhanh ở `13_QUICKREF.md`.

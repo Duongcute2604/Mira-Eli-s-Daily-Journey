@@ -133,11 +133,15 @@ Chi tiết điều kiện và nội dung: `11_ENDING.md`.
 | `07_UI_HUD.md` | HUD, màn hình điện thoại, journal, ending gallery. |
 | `08_ASSET_MANIFEST.md` | Asset có / thiếu / trạng thái license. |
 | `09_SYSTEM_VARIABLES.md` | ⭐ **27 object narrative + 6 resource.** Nguồn chuẩn cho logic trạng thái. |
-| `10_CHOICE_BRANCHING.md` | ⭐ **20 choice với delta số cụ thể.** |
+| `10_CHOICE_BRANCHING.md` | ⭐ **22 choice với delta số cụ thể.** |
 | `11_ENDING.md` | 9 ending, resolver, epilogue variant. |
+| `12_RULES.md` | **36 luật thi công** — stack, dữ liệu, nội dung, công việc, minigame. |
+| `13_QUICKREF.md` | **Bảng tra cứu nhanh** — hằng số, ID, cần gì mở file nào. |
 
 **Thứ tự đọc khi làm việc:**
-1. `CANON_DECISIONS.md` → 2. `00_OVERVIEW.md` → 3. `09_SYSTEM_VARIABLES.md` → 4. `10_CHOICE_BRANCHING.md` → 5. pack theo nhiệm vụ.
+1. `13_QUICKREF.md` — mở trước, phần lớn câu hỏi dừng ở đây
+2. `CANON_DECISIONS.md` → 3. `00_OVERVIEW.md` → 4. `09_SYSTEM_VARIABLES.md` → 5. `10_CHOICE_BRANCHING.md` → 6. pack theo nhiệm vụ
+7. `12_RULES.md` — trước khi viết dòng code đầu tiên
 
 ---
 

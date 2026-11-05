@@ -1,6 +1,6 @@
 # 🔀 10. CHOICE & BRANCHING
 
-> 20 choice, tách riêng khỏi Story Pack. Chuyển ở đây là con số cụ thể, không phải mô tả định tính.
+> 22 choice, tách riêng khỏi Story Pack. Chuyển ở đây là con số cụ thể, không phải mô tả định tính.
 > Ràng buộc tổng quát xem `CANON_DECISIONS.md`.
 
 ---

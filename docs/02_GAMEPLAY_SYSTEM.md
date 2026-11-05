@@ -23,6 +23,8 @@ DIALOGUE / EVENT SCENE
    ↓
 PLAYER CHOICE (nếu có)
    ↓
+MINIGAME (nếu có — từ Arc 2 trở đi, xem 12_RULES §12.10)
+   ↓
 UPDATE VALUES / FLAGS
    ↓
 UNLOCK NEXT EVENT OR CHAPTER
@@ -38,6 +40,8 @@ NEXT CHAPTER
 - Không phải chapter nào cũng có choice lớn.
 - Khám phá dùng để xây bối cảnh, cảm xúc và mở event; Choice dùng để thay đổi trạng thái narrative.
 - Gameplay loop phải **ngắn, rõ, lặp lại dễ hiểu**.
+
+**Minigame (D-004):** 3 cái — MG1 chia thuốc, MG2 bữa tối, MG3 ca đêm. Thuộc Tầng 1 RESOURCE, cập nhật ngay. Mỗi cái ≤ 60 giây, một màn hình, **không thua cứng**, và **có bản dự phòng bằng choice**. Không có minigame trong vertical slice. Chi tiết: `12_RULES.md` §12.10.
 
 ---
 

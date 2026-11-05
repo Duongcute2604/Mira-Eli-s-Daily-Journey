@@ -270,7 +270,7 @@ Không phải choice nào cũng ± giống nhau. Ba mức:
 
 > `ROMANCE_STATE` **không** khóa ở A2_C06. Phải đợi A2_C09.
 
-**Danh sách delta đầy đủ của cả 20 choice:** xem `10_CHOICE_BRANCHING.md`.
+**Danh sách delta đầy đủ của cả 22 choice:** xem `10_CHOICE_BRANCHING.md`.
 
 ---
 
@@ -370,5 +370,5 @@ Chi tiết UI: `07_UI_HUD.md`.
 
 ---
 
-**TIẾP** → `10_CHOICE_BRANCHING.md` (chi tiết delta của 20 choice)
+**TIẾP** → `10_CHOICE_BRANCHING.md` (chi tiết delta của 22 choice)
 **QUAY LẠI** → `CANON_DECISIONS.md`
